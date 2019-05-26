@@ -1,7 +1,7 @@
-package com.example.libraryserver.api;
+package com.example.library.server.api;
 
-import com.example.libraryserver.business.UserResource;
-import com.example.libraryserver.business.UserService;
+import com.example.library.server.business.UserResource;
+import com.example.library.server.business.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.stereotype.Component;

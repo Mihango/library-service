@@ -1,4 +1,4 @@
-package com.example.libraryserver.dataaccess;
+package com.example.library.server.dataaccess;
 
 import org.springframework.data.mongodb.repository.ReactiveMongoRepository;
 

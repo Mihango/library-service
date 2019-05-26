@@ -1,4 +1,4 @@
-package com.example.libraryserver.config;
+package com.example.library.server.config;
 
 
 import org.springframework.context.annotation.Bean;
@@ -12,6 +12,7 @@ public class WebSecurityConfiguration {
 
     @Bean
     public PasswordEncoder passwordEncoder() {
+        // adds new delegating password encoder in spring security 5
         return PasswordEncoderFactories.createDelegatingPasswordEncoder();
     }
 }

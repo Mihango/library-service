@@ -1,6 +1,6 @@
-package com.example.libraryserver.config;
+package com.example.library.server.config;
 
-import com.example.libraryserver.api.UserHandler;
+import com.example.library.server.api.UserHandler;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.MediaType;

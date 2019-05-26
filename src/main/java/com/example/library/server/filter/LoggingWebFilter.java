@@ -1,4 +1,4 @@
-package com.example.libraryserver.filter;
+package com.example.library.server.filter;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

@@ -1,14 +1,15 @@
-package com.example.libraryserver;
+package com.example.library.server;
 
-import com.example.libraryserver.common.Role;
-import com.example.libraryserver.dataaccess.Book;
-import com.example.libraryserver.dataaccess.BookRepository;
-import com.example.libraryserver.dataaccess.User;
-import com.example.libraryserver.dataaccess.UserRepository;
+import com.example.library.server.common.Role;
+import com.example.library.server.dataaccess.Book;
+import com.example.library.server.dataaccess.BookRepository;
+import com.example.library.server.dataaccess.User;
+import com.example.library.server.dataaccess.UserRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Component;
 import reactor.core.publisher.Flux;
 
@@ -38,11 +39,13 @@ public class DataInitializer implements CommandLineRunner {
 
     private final BookRepository bookRepository;
     private final UserRepository userRepository;
+    private final PasswordEncoder passwordEncoder;
 
     @Autowired
-    public DataInitializer(BookRepository bookRepository, UserRepository userRepository) {
+    public DataInitializer(BookRepository bookRepository, UserRepository userRepository, PasswordEncoder passwordEncoder) {
         this.bookRepository = bookRepository;
         this.userRepository = userRepository;
+        this.passwordEncoder = passwordEncoder;
     }
 
     @Override
@@ -61,21 +64,21 @@ public class DataInitializer implements CommandLineRunner {
                                 new User(
                                         USER_IDENTIFIER,
                                         "user@example.com",
-                                        "user",
+                                        passwordEncoder.encode("user"),
                                         "Library",
                                         "User",
                                         Collections.singletonList(Role.USER)),
                                 new User(
                                         CURATOR_IDENTIFIER,
                                         "curator@example.com",
-                                        "curator",
+                                        passwordEncoder.encode("curator"),
                                         "Library",
                                         "Curator",
                                         Arrays.asList(Role.USER, Role.CURATOR)),
                                 new User(
                                         ADMIN_IDENTIFIER,
                                         "admin@example.com",
-                                        "admin",
+                                        passwordEncoder.encode("admin"),
                                         "Library",
                                         "Administrator",
                                         Arrays.asList(Role.USER, Role.CURATOR, Role.ADMIN))))

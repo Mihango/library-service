@@ -1,4 +1,4 @@
-package com.example.libraryserver.common;
+package com.example.library.server.common;
 
 public enum Role {
 

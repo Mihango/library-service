@@ -1,4 +1,4 @@
-package com.example.libraryserver.api;
+package com.example.library.server.api;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

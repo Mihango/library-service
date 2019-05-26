@@ -1,4 +1,4 @@
-package com.example.libraryserver.dataaccess;
+package com.example.library.server.dataaccess;
 
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.springframework.data.annotation.Id;

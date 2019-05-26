@@ -1,9 +1,9 @@
-package com.example.libraryserver.business;
+package com.example.library.server.business;
 
-import com.example.libraryserver.dataaccess.Book;
-import com.example.libraryserver.dataaccess.BookRepository;
-import com.example.libraryserver.dataaccess.User;
-import com.example.libraryserver.dataaccess.UserRepository;
+import com.example.library.server.dataaccess.Book;
+import com.example.library.server.dataaccess.BookRepository;
+import com.example.library.server.dataaccess.User;
+import com.example.library.server.dataaccess.UserRepository;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

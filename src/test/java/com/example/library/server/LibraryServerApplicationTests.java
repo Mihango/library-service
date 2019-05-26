@@ -1,4 +1,4 @@
-package com.example.libraryserver;
+package com.example.library.server;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
